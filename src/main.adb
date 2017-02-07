@@ -15,32 +15,31 @@ begin
    allNodes := Integer'Value(Get_Line);
 
    --convert to desired data type
-   Put_Line("So there are" & allNodes'Image & " total nodes in the system?");
+
 
    --allocate memory for array based on input
    declare
-      myBmr : bmr(1..allNodes);
-      boolVal : Boolean;
+      allNodeNames : charArray(1..allNodes);
+      myBmr : bmr(1..allNodes, 1..allNodes);
    begin
+
+      for i in 1..allNodes loop
+         Put_Line("Enter name for node #"&i'image);
+         allNodeNames(i) := Get_Line(1);
+      end loop;
+
+
       for i in 1..allNodes loop
          for j in 1..allNodes loop
             if i = j then
+               --myBmr(i,j) := 0;
                goto Continue;
             end if;
 
-            Put_Line("Enter true or false: can"& i'Image &" talk to"& j'Image &"?");
+            Put_Line("Enter true or false: can "& allNodeNames(i) &" talk to "& allNodeNames(j) &"?");
 
             if Get_Line = "true" then
-               boolVal := True;
-            else
-               boolVal := False;
-            end if;
-
-            myBmr(i,j) := boolVal;
-            if myBmr(i,j) then
-               Put_Line("true");
-            else
-               Put_Line("false");
+               myBmr(i,j) := 1;
             end if;
 
             <<Continue>>
@@ -48,15 +47,20 @@ begin
       end loop;
 
 
-      for i in myBmr'Range loop
-         Put(i);
-      end loop;
+      Put(" ");
 
-      for i : arrays in myBmr loop
-         for j in i'Length loop
-            Put_Line(i);
-            Put_Line("");
-            end loop;
+      for i in allNodeNames'Range loop
+         Put(' '& allNodeNames(i));
+      end loop;
+      Put_Line("");
+      for row in myBmr'Range(1) loop
+         Put(allNodeNames(row));
+
+         for column in myBmr'Range(2) loop
+            Put(myBmr(row,column)'Image);
+         end loop;
+
+         Put_Line("");
       end loop;
 
    end;
