@@ -1,7 +1,0 @@
-package warshAlg is
-
-
-
-
-
-end;
