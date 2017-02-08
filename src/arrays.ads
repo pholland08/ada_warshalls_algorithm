@@ -4,9 +4,8 @@ package arrays is
 
    type intArray is array (Integer range <>) of Integer;
    type charArray is array (Integer range <>) of Character;
-   type bmr is array
-     (Integer range <>, Integer range <>) of Integer
-     with Default_Component_Value => 0;
+   type bmr is array(Integer range <>, Integer range <>) of Boolean
+     with Default_Component_Value => False;
    type namedBmr is array
      (Character range <>, Character range <>) of Integer
      with Default_Component_Value => 0;

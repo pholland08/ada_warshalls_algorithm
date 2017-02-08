@@ -13,6 +13,7 @@ begin
    --prompt user for input
    Put_Line("How many nodes?");
    allNodes := Integer'Value(Get_Line);
+   Put_Line(allNodes'Image&" nodes");
 
    --convert to desired data type
 
@@ -24,8 +25,9 @@ begin
    begin
 
       for i in 1..allNodes loop
-         Put_Line("Enter name for node #"&i'image);
+         Put_Line("Enter name for node"&i'image);
          allNodeNames(i) := Get_Line(1);
+         Put_Line("Node"&i'image&" => "&allNodeNames(i));
       end loop;
 
 
@@ -39,25 +41,31 @@ begin
             Put_Line("Enter true or false: can "& allNodeNames(i) &" talk to "& allNodeNames(j) &"?");
 
             if Get_Line = "true" then
-               myBmr(i,j) := 1;
+               myBmr(i,j) := True;
             end if;
+
+            Put_Line(allNodeNames(i) &" => "& allNodeNames(j)&": "&myBmr(i,j)'Image);
 
             <<Continue>>
          end loop;
       end loop;
 
 
-      Put(" ");
+      Put("  ");
 
       for i in allNodeNames'Range loop
-         Put(' '& allNodeNames(i));
+         Put(allNodeNames(i)&"      ");
       end loop;
       Put_Line("");
       for row in myBmr'Range(1) loop
-         Put(allNodeNames(row));
+         Put(allNodeNames(row)&" ");
 
          for column in myBmr'Range(2) loop
-            Put(myBmr(row,column)'Image);
+            if myBmr(row,column) then
+               Put(myBmr(row,column)'Image&"   ");
+            else
+               Put(myBmr(row,column)'Image&"  ");
+            end if;
          end loop;
 
          Put_Line("");
