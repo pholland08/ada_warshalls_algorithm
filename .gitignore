@@ -1,5 +1,6 @@
 *.xml
 ada_warshalls_algorithm.gpr
+<<<<<<< HEAD
 *.o
 b__*
 *.bexch
@@ -11,3 +12,16 @@ gpsauto.cgpr
 *.db-wal
 *.exe
 results.txt
+=======
+*.ali
+*.o
+*.exe
+gpsauto.cgpr
+*.db-shm
+gnatinspect.db-wal
+*.db
+main.bexch
+b__*
+src/results.txt
+main.exe
+>>>>>>> origin/master
