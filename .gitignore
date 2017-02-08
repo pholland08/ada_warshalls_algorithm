@@ -1,0 +1,13 @@
+*.xml
+ada_warshalls_algorithm.gpr
+*.o
+b__*
+*.bexch
+main.ali
+*.db-shm
+gnatinspect.db
+*.ali
+gpsauto.cgpr
+*.db-wal
+*.exe
+results.txt
