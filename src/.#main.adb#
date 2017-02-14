@@ -42,7 +42,10 @@ begin
                goto Continue;
             end if;
 
-            Put_Line("Enter true or false: can "& allNodeNames(i) &" talk to "& allNodeNames(j) &"?");
+            Put_Line("Enter true or false: can "
+                     &allNodeNames(i)
+                     &" talk to "
+                     & allNodeNames(j) &"?");
 
             if Get_Line = "1" then
                myBmr(i,j) := 1;
