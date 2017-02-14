@@ -1,7 +1,8 @@
 
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
-with arrays; use arrays;
+with myTypes; use myTypes;
+with myProcs; use myProcs;
 --include dependencies
 
 
@@ -52,24 +53,8 @@ begin
 
 
       Put("  ");
+      printArray(allNodeNames, myBmr);
 
-      for i in allNodeNames'Range loop
-         Put(allNodeNames(i)&"      ");
-      end loop;
-      Put_Line("");
-      for row in myBmr'Range(1) loop
-         Put(allNodeNames(row)&" ");
-
-         for column in myBmr'Range(2) loop
-            if myBmr(row,column) then
-               Put(myBmr(row,column)'Image&"   ");
-            else
-               Put(myBmr(row,column)'Image&"  ");
-            end if;
-         end loop;
-
-         Put_Line("");
-      end loop;
 
    end;
 

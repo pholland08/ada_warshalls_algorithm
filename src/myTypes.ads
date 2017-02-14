@@ -1,6 +1,6 @@
 --This is where the array types are initialized for use in other files
 
-package arrays is
+package myTypes is
 
    type intArray is array (Integer range <>) of Integer;
    type charArray is array (Integer range <>) of Character;
@@ -11,4 +11,4 @@ package arrays is
      with Default_Component_Value => 0;
 
 
-end arrays;
+end myTypes;
