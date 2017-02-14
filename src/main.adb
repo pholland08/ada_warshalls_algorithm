@@ -1,8 +1,11 @@
 
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+
+with myTypes; use myTypes;
+with myProcs; use myProcs;
+
 with warshAlg;
-with arrays; use arrays;
 --include dependencies
 
 
@@ -73,31 +76,13 @@ begin
 
       warshAlg(myBmr);
       Put("  ");
+      printArray(allNodeNames, myBmr);
 
-      for i in allNodeNames'Range loop
-         Put(allNodeNames(i)&"      ");
-      end loop;
-      Put_Line("");
-      for row in myBmr'Range(1) loop
-         Put(allNodeNames(row)&" ");
-
-         for column in myBmr'Range(2) loop
-            if myBmr(row,column) then
-               Put(myBmr(row,column)'Image&"   ");
-            else
-               Put(myBmr(row,column)'Image&"  ");
-            end if;
-         end loop;
-
-         Put_Line("");
-      end loop;
 
    end;
 
 
-   --print each transaction as it's processed
 
 
 end Main;
 
---this is a comment to show github seeing updates
