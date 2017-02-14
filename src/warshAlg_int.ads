@@ -1,4 +1,4 @@
-with arrays; use arrays;
+with myTypes; use myTypes;
 with int_or; use int_or;
 
 --generic

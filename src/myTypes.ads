@@ -6,6 +6,8 @@ package myTypes is
    type charArray is array (Integer range <>) of Character;
    type bmr is array(Integer range <>, Integer range <>) of Boolean
      with Default_Component_Value => False;
+   type int_bmr is array(Integer range <>, Integer range <>) of Integer range 0..1
+     with Default_Component_Value => 0;
    type namedBmr is array
      (Character range <>, Character range <>) of Integer
      with Default_Component_Value => 0;

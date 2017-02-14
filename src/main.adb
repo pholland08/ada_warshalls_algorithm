@@ -4,7 +4,8 @@ with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 --with warshAlg_bool;
 with warshAlg_int;
 with int_or; use int_or;
-with arrays; use arrays;
+with myProcs; use myProcs;
+with myTypes; use myTypes;
 --include dependencies
 
 
