@@ -1,27 +1,12 @@
 *.xml
 ada_warshalls_algorithm.gpr
-<<<<<<< HEAD
-*.o
-b__*
+*.ali
 *.bexch
-main.ali
-*.db-shm
-gnatinspect.db
-*.ali
-gpsauto.cgpr
-*.db-wal
-*.exe
-results.txt
-=======
-*.ali
 *.o
-*.exe
-gpsauto.cgpr
-*.db-shm
-gnatinspect.db-wal
-*.db
-main.bexch
-b__*
 src/results.txt
-main.exe
->>>>>>> origin/master
+*.cgpr
+*.db
+*.db-wal
+*.db-shm
+*.exe
+b__*
