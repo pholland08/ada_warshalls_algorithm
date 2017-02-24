@@ -1,0 +1,122 @@
+
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Text_IO.Unbounded_IO; use Ada.Text_IO.Unbounded_IO;
+
+with MyPac; use MyPac;
+with warshawsAlgorithm;-- use warshawsAlgorithm;
+--include dependencies
+
+
+procedure Main is
+   package SU renames Ada.Strings.Unbounded;
+
+   inputFile, outputFile : File_Type;
+   -- Write nextLine function
+   inputLine, outputLine : SU.Unbounded_String;
+   Node_Count : Integer;
+
+begin
+   Open(File => inputFile, Mode => In_File, Name => "A_Input.txt");
+   Create(File => outputFile, Mode => Out_File, Name => "A_Output.txt");
+
+   -- Get input from file
+   Put_Line(outputFile,"How many nodes?");
+   New_Line(outputFile);
+   New_Line(outputFile);
+   Node_Count := Integer'Value(Get_Line(inputFile));
+   Put_Line(outputFile,"Received count of"&Node_Count'Image&" nodes");
+
+
+
+-- Create matrix
+   --allocate memory for array based on input
+   declare
+
+      nodeList : myArrayOfStrings(1..Node_Count);
+      booleanMatrix : intMatrix(1..Node_Count, 1..Node_Count);
+
+
+   begin
+
+      for i in 1..Node_Count loop
+         Put_Line(outputFile,"Enter name for node"&i'image);
+         --         nodeList(i) := SU.To_Unbounded_String(Get_Line);
+         nodeList(i) := SU.To_Unbounded_String(Get_Line(inputFile));
+         Put_Line(outputFile,("Node" & i'image) & " <= " & nodeList(i));
+      end loop;
+
+      -- Loop to get input for which nodes communicate directly
+      for i  in booleanMatrix'Range loop
+         for j in booleanMatrix'Range(1) loop
+
+            -- Assuming that nodes do not talk to themselves
+            if i = j then
+               Put_Line(outputFile,"We do not consider that node "&nodeList(i)&" talks to itself.");
+               goto Continue;
+            end if;
+
+            -- Can nodeList(i) talk to nodeList(j)?
+            Put_Line(outputFile,"Can "& nodeList(i) &" talk to "& nodeList(j) &"?");
+
+            -- Assign value of response to node
+               -- Note: All matrix values were initialized by default to False
+            if (Integer'Value(Get_Line(inputFile)) = 1) then
+               booleanMatrix(i,j) := 1;
+            else
+               booleanMatrix(i,j) := 0;
+            end if;
+
+            -- Print the relation between nodeList(i) & nodeList(j)
+            Put_Line(outputFile,nodeList(i) &" => "& nodeList(j)&": "&booleanMatrix(i,j)'Image);
+
+            <<Continue>>
+         end loop;
+      end loop;
+
+      -- Print matrix before Warshaw's Algorithm
+      Put_Line(outputFile,"Matrix before Warshaw's Algorithm is:");
+
+      --print node names
+      put(outputFile,"   ");
+      printArrayOfStrings(nodeList);
+
+      -- Print node name and communication values
+      for i in booleanMatrix'First..booleanMatrix'Last loop
+         put (outputFile,nodeList(i)&" ");
+         for j in booleanMatrix'First..booleanMatrix'Last loop
+            --------------------------printArrayOfIntegers(booleanMatrix'Range(i));
+            put(outputFile,booleanMatrix(i,j)'Image&" ");
+         end loop;
+         Put_Line(outputFile,"");
+      end loop;
+
+
+      -- Perform Warshaw's Algorithm
+      warshawsAlgorithm(booleanMatrix);
+      Put_Line(outputFile,"");
+      -- Print matrix after Warshaw's Algorithm
+      Put_Line(outputFile,"Matrix after Warshaw's Algorithm is:");
+
+      --print node names
+      put(outputFile,"   ");
+      printArrayOfStrings(nodeList);
+
+      -- Print node name and communication values
+      for i in booleanMatrix'First..booleanMatrix'Last loop
+         put (outputFile,nodeList(i)&" ");
+         for j in booleanMatrix'First..booleanMatrix'Last loop
+            --------------------------printArrayOfIntegers(booleanMatrix'Range(i));
+            put(outputFile,booleanMatrix(i,j)'Image&" ");
+         end loop;
+         Put_Line(outputFile,"");
+      end loop;
+
+   end;
+
+
+Close(inputFile);
+end Main;
+
+

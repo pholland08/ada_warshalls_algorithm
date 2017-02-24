@@ -1,0 +1,34 @@
+
+package body MyPac is
+
+   --print
+   procedure printArrayOfStrings(arr : in myArrayOfStrings) is
+   begin
+      for i in arr'Range loop
+         put(arr(i)&"  ");
+      end loop;
+      Put_Line("");
+   end printArrayOfStrings;
+
+
+   procedure printArrayOfIntegers(arr : in intArray)is
+   begin
+      for i in arr'Range loop
+         put(arr(i)'Image&" ");
+      end loop;
+      Put_Line("");
+   end printArrayOfIntegers;
+
+
+   procedure printMatrixOfIntegers(arr : in intMatrix; int : in Integer) is
+   begin
+      for i in arr'Range loop
+         put(arr(int,i)'Image&" ");
+      end loop;
+      Put_Line(" ");
+   end printMatrixOfIntegers;
+
+
+
+
+end MyPac;

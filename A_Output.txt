@@ -1,0 +1,126 @@
+How many nodes?
+
+
+Received count of 7 nodes
+Enter name for node 1
+Node 1 <= a
+Enter name for node 2
+Node 2 <= b
+Enter name for node 3
+Node 3 <= c
+Enter name for node 4
+Node 4 <= d
+Enter name for node 5
+Node 5 <= j
+Enter name for node 6
+Node 6 <= k
+Enter name for node 7
+Node 7 <= l
+We do not consider that node a talks to itself.
+Can a talk to b?
+a => b:  1
+Can a talk to c?
+a => c:  0
+Can a talk to d?
+a => d:  0
+Can a talk to j?
+a => j:  0
+Can a talk to k?
+a => k:  0
+Can a talk to l?
+a => l:  0
+Can b talk to a?
+b => a:  0
+We do not consider that node b talks to itself.
+Can b talk to c?
+b => c:  1
+Can b talk to d?
+b => d:  1
+Can b talk to j?
+b => j:  0
+Can b talk to k?
+b => k:  0
+Can b talk to l?
+b => l:  0
+Can c talk to a?
+c => a:  0
+Can c talk to b?
+c => b:  1
+We do not consider that node c talks to itself.
+Can c talk to d?
+c => d:  0
+Can c talk to j?
+c => j:  0
+Can c talk to k?
+c => k:  0
+Can c talk to l?
+c => l:  0
+Can d talk to a?
+d => a:  0
+Can d talk to b?
+d => b:  0
+Can d talk to c?
+d => c:  0
+We do not consider that node d talks to itself.
+Can d talk to j?
+d => j:  0
+Can d talk to k?
+d => k:  0
+Can d talk to l?
+d => l:  0
+Can j talk to a?
+j => a:  0
+Can j talk to b?
+j => b:  0
+Can j talk to c?
+j => c:  0
+Can j talk to d?
+j => d:  0
+We do not consider that node j talks to itself.
+Can j talk to k?
+j => k:  1
+Can j talk to l?
+j => l:  1
+Can k talk to a?
+k => a:  0
+Can k talk to b?
+k => b:  0
+Can k talk to c?
+k => c:  0
+Can k talk to d?
+k => d:  0
+Can k talk to j?
+k => j:  0
+We do not consider that node k talks to itself.
+Can k talk to l?
+k => l:  0
+Can l talk to a?
+l => a:  0
+Can l talk to b?
+l => b:  0
+Can l talk to c?
+l => c:  0
+Can l talk to d?
+l => d:  0
+Can l talk to j?
+l => j:  0
+Can l talk to k?
+l => k:  0
+We do not consider that node l talks to itself.
+Matrix before Warshaw's Algorithm is:
+   a  0  1  0  0  0  0  0 
+b  0  0  1  1  0  0  0 
+c  0  1  0  0  0  0  0 
+d  0  0  0  0  0  0  0 
+j  0  0  0  0  0  1  1 
+k  0  0  0  0  0  0  0 
+l  0  0  0  0  0  0  0 
+
+Matrix after Warshaw's Algorithm is:
+   a  0  1  1  1  0  0  0 
+b  0  1  1  1  0  0  0 
+c  0  1  1  1  0  0  0 
+d  0  0  0  0  0  0  0 
+j  0  0  0  0  0  1  1 
+k  0  0  0  0  0  0  0 
+l  0  0  0  0  0  0  0 
