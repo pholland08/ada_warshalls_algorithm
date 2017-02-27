@@ -1,0 +1,138 @@
+
+----------------------------------------------------
+------------- C option data and output--------------
+----------------------------------------------------
+
+How many nodes?
+7
+Enter name for node 1
+a  
+Enter name for node 2
+b  
+Enter name for node 3
+c  
+Enter name for node 4
+d  
+Enter name for node 5
+j  
+Enter name for node 6
+k  
+Enter name for node 7
+l  
+Can a talk to a?
+FALSE
+Can a talk to b?
+TRUE
+Can a talk to c?
+FALSE
+Can a talk to d?
+FALSE
+Can a talk to j?
+FALSE
+Can a talk to k?
+FALSE
+Can a talk to l?
+FALSE
+Can b talk to a?
+FALSE
+Can b talk to b?
+FALSE
+Can b talk to c?
+TRUE
+Can b talk to d?
+TRUE
+Can b talk to j?
+FALSE
+Can b talk to k?
+FALSE
+Can b talk to l?
+FALSE
+Can c talk to a?
+FALSE
+Can c talk to b?
+TRUE
+Can c talk to c?
+FALSE
+Can c talk to d?
+FALSE
+Can c talk to j?
+FALSE
+Can c talk to k?
+FALSE
+Can c talk to l?
+FALSE
+Can d talk to a?
+FALSE
+Can d talk to b?
+FALSE
+Can d talk to c?
+FALSE
+Can d talk to d?
+FALSE
+Can d talk to j?
+FALSE
+Can d talk to k?
+FALSE
+Can d talk to l?
+FALSE
+Can j talk to a?
+FALSE
+Can j talk to b?
+FALSE
+Can j talk to c?
+FALSE
+Can j talk to d?
+FALSE
+Can j talk to j?
+FALSE
+Can j talk to k?
+TRUE
+Can j talk to l?
+TRUE
+Can k talk to a?
+FALSE
+Can k talk to b?
+FALSE
+Can k talk to c?
+FALSE
+Can k talk to d?
+FALSE
+Can k talk to j?
+FALSE
+Can k talk to k?
+FALSE
+Can k talk to l?
+FALSE
+Can l talk to a?
+FALSE
+Can l talk to b?
+FALSE
+Can l talk to c?
+FALSE
+Can l talk to d?
+FALSE
+Can l talk to j?
+FALSE
+Can l talk to k?
+FALSE
+Can l talk to l?
+FALSE
+Matrix before Warshaw's Algorithm is:
+     a    b    c    d    j    k    l    
+a    0    1    0    0    0    0    0   
+b    0    0    1    1    0    0    0   
+c    0    1    0    0    0    0    0   
+d    0    0    0    0    0    0    0   
+j    0    0    0    0    0    1    1   
+k    0    0    0    0    0    0    0   
+l    0    0    0    0    0    0    0   
+
+Matrix after Warshaw's Algorithm is:
+     a    b    c    d    j    k    l    
+a    0    1    1    1    0    0    0   
+b    0    1    1    1    0    0    0   
+c    0    1    1    1    0    0    0   
+d    0    0    0    0    0    0    0   
+j    0    0    0    0    0    1    1   
+k    0    0    0    0    0    0    0   
+l    0    0    0    0    0    0    0   

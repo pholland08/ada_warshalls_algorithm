@@ -1,0 +1,138 @@
+
+----------------------------------------------------
+------------- A-2 option data and output------------
+----------------------------------------------------
+
+How many nodes?
+7
+Enter name for node 1
+1  
+Enter name for node 2
+2  
+Enter name for node 3
+3  
+Enter name for node 4
+4  
+Enter name for node 5
+5  
+Enter name for node 6
+6  
+Enter name for node 7
+7  
+Can 1 talk to 1?
+0
+Can 1 talk to 2?
+1
+Can 1 talk to 3?
+0
+Can 1 talk to 4?
+0
+Can 1 talk to 5?
+0
+Can 1 talk to 6?
+0
+Can 1 talk to 7?
+0
+Can 2 talk to 1?
+1
+Can 2 talk to 2?
+0
+Can 2 talk to 3?
+0
+Can 2 talk to 4?
+0
+Can 2 talk to 5?
+0
+Can 2 talk to 6?
+0
+Can 2 talk to 7?
+0
+Can 3 talk to 1?
+0
+Can 3 talk to 2?
+1
+Can 3 talk to 3?
+0
+Can 3 talk to 4?
+1
+Can 3 talk to 5?
+0
+Can 3 talk to 6?
+0
+Can 3 talk to 7?
+0
+Can 4 talk to 1?
+0
+Can 4 talk to 2?
+0
+Can 4 talk to 3?
+1
+Can 4 talk to 4?
+0
+Can 4 talk to 5?
+1
+Can 4 talk to 6?
+0
+Can 4 talk to 7?
+0
+Can 5 talk to 1?
+0
+Can 5 talk to 2?
+0
+Can 5 talk to 3?
+0
+Can 5 talk to 4?
+1
+Can 5 talk to 5?
+0
+Can 5 talk to 6?
+1
+Can 5 talk to 7?
+0
+Can 6 talk to 1?
+0
+Can 6 talk to 2?
+0
+Can 6 talk to 3?
+0
+Can 6 talk to 4?
+0
+Can 6 talk to 5?
+0
+Can 6 talk to 6?
+0
+Can 6 talk to 7?
+0
+Can 7 talk to 1?
+0
+Can 7 talk to 2?
+0
+Can 7 talk to 3?
+0
+Can 7 talk to 4?
+0
+Can 7 talk to 5?
+0
+Can 7 talk to 6?
+1
+Can 7 talk to 7?
+0
+Matrix before Warshaw's Algorithm is:
+     1    2    3    4    5    6    7    
+1    0    1    0    0    0    0    0   
+2    1    0    0    0    0    0    0   
+3    0    1    0    1    0    0    0   
+4    0    0    1    0    1    0    0   
+5    0    0    0    1    0    1    0   
+6    0    0    0    0    0    0    0   
+7    0    0    0    0    0    1    0   
+
+Matrix after Warshaw's Algorithm is:
+     1    2    3    4    5    6    7    
+1    1    1    0    0    0    0    0   
+2    1    1    0    0    0    0    0   
+3    1    1    1    1    1    1    0   
+4    1    1    1    1    1    1    0   
+5    1    1    1    1    1    1    0   
+6    0    0    0    0    0    0    0   
+7    0    0    0    0    0    1    0   

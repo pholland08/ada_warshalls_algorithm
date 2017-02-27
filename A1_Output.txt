@@ -1,0 +1,210 @@
+
+----------------------------------------------------
+------------- A-1 option data and output------------
+----------------------------------------------------
+
+How many nodes?
+9
+Enter name for node 1
+Ada
+Enter name for node 2
+Bob
+Enter name for node 3
+Joe
+Enter name for node 4
+Ken
+Enter name for node 5
+Sam
+Enter name for node 6
+Sue
+Enter name for node 7
+Tim
+Enter name for node 8
+Tom
+Enter name for node 9
+Jim
+Can Ada talk to Ada?
+0
+Can Ada talk to Bob?
+0
+Can Ada talk to Joe?
+0
+Can Ada talk to Ken?
+0
+Can Ada talk to Sam?
+0
+Can Ada talk to Sue?
+0
+Can Ada talk to Tim?
+0
+Can Ada talk to Tom?
+0
+Can Ada talk to Jim?
+1
+Can Bob talk to Ada?
+0
+Can Bob talk to Bob?
+0
+Can Bob talk to Joe?
+0
+Can Bob talk to Ken?
+0
+Can Bob talk to Sam?
+0
+Can Bob talk to Sue?
+0
+Can Bob talk to Tim?
+0
+Can Bob talk to Tom?
+0
+Can Bob talk to Jim?
+1
+Can Joe talk to Ada?
+0
+Can Joe talk to Bob?
+0
+Can Joe talk to Joe?
+0
+Can Joe talk to Ken?
+1
+Can Joe talk to Sam?
+0
+Can Joe talk to Sue?
+0
+Can Joe talk to Tim?
+0
+Can Joe talk to Tom?
+0
+Can Joe talk to Jim?
+0
+Can Ken talk to Ada?
+0
+Can Ken talk to Bob?
+0
+Can Ken talk to Joe?
+1
+Can Ken talk to Ken?
+0
+Can Ken talk to Sam?
+0
+Can Ken talk to Sue?
+0
+Can Ken talk to Tim?
+1
+Can Ken talk to Tom?
+1
+Can Ken talk to Jim?
+0
+Can Sam talk to Ada?
+0
+Can Sam talk to Bob?
+0
+Can Sam talk to Joe?
+0
+Can Sam talk to Ken?
+0
+Can Sam talk to Sam?
+0
+Can Sam talk to Sue?
+0
+Can Sam talk to Tim?
+0
+Can Sam talk to Tom?
+0
+Can Sam talk to Jim?
+0
+Can Sue talk to Ada?
+0
+Can Sue talk to Bob?
+0
+Can Sue talk to Joe?
+0
+Can Sue talk to Ken?
+0
+Can Sue talk to Sam?
+0
+Can Sue talk to Sue?
+0
+Can Sue talk to Tim?
+1
+Can Sue talk to Tom?
+0
+Can Sue talk to Jim?
+0
+Can Tim talk to Ada?
+0
+Can Tim talk to Bob?
+0
+Can Tim talk to Joe?
+0
+Can Tim talk to Ken?
+0
+Can Tim talk to Sam?
+0
+Can Tim talk to Sue?
+1
+Can Tim talk to Tim?
+0
+Can Tim talk to Tom?
+0
+Can Tim talk to Jim?
+0
+Can Tom talk to Ada?
+0
+Can Tom talk to Bob?
+0
+Can Tom talk to Joe?
+0
+Can Tom talk to Ken?
+1
+Can Tom talk to Sam?
+0
+Can Tom talk to Sue?
+0
+Can Tom talk to Tim?
+0
+Can Tom talk to Tom?
+0
+Can Tom talk to Jim?
+0
+Can Jim talk to Ada?
+1
+Can Jim talk to Bob?
+0
+Can Jim talk to Joe?
+0
+Can Jim talk to Ken?
+0
+Can Jim talk to Sam?
+0
+Can Jim talk to Sue?
+0
+Can Jim talk to Tim?
+0
+Can Jim talk to Tom?
+0
+Can Jim talk to Jim?
+0
+Matrix before Warshaw's Algorithm is:
+     Ada  Bob  Joe  Ken  Sam  Sue  Tim  Tom  Jim  
+Ada  0    0    0    0    0    0    0    0    1   
+Bob  0    0    0    0    0    0    0    0    1   
+Joe  0    0    0    1    0    0    0    0    0   
+Ken  0    0    1    0    0    0    1    1    0   
+Sam  0    0    0    0    0    0    0    0    0   
+Sue  0    0    0    0    0    0    1    0    0   
+Tim  0    0    0    0    0    1    0    0    0   
+Tom  0    0    0    1    0    0    0    0    0   
+Jim  1    0    0    0    0    0    0    0    0   
+
+Matrix after Warshaw's Algorithm is:
+     Ada  Bob  Joe  Ken  Sam  Sue  Tim  Tom  Jim  
+Ada  1    0    0    0    0    0    0    0    1   
+Bob  1    0    0    0    0    0    0    0    1   
+Joe  0    0    1    1    0    1    1    1    0   
+Ken  0    0    1    1    0    1    1    1    0   
+Sam  0    0    0    0    0    0    0    0    0   
+Sue  0    0    0    0    0    1    1    0    0   
+Tim  0    0    0    0    0    1    1    0    0   
+Tom  0    0    1    1    0    1    1    1    0   
+Jim  1    0    0    0    0    0    0    0    1   
