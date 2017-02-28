@@ -1,8 +1,0 @@
-with ada.Text_IO; use Ada.Text_IO;
-with myTypes; use armyTypesrays;
-package myProcs is
-
-   procedure printArray(allNodeNames : arrays.charArray; myBmr : arrays.bmr);
-
-
-end myLib;
