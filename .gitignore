@@ -10,3 +10,4 @@ src/results.txt
 *.db-shm
 *.exe
 b__*
+*.pdf
