@@ -1,5 +1,4 @@
 *.xml
-ada_warshalls_algorithm.gpr
 *.ali
 *.bexch
 *.o
