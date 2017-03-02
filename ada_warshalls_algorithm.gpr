@@ -1,0 +1,7 @@
+project Ada_Warshalls_Algorithm is
+
+   for Source_Dirs use ("./**");
+   for Main use ("src/main.adb");
+
+end Ada_Warshalls_Algorithm;
+
