@@ -1,5 +1,4 @@
 *.xml
-ada_warshalls_algorithm.gpr
 *.ali
 *.bexch
 *.o
@@ -10,3 +9,7 @@ src/results.txt
 *.db-shm
 *.exe
 b__*
+*.pdf
+*.txt
+*.docx
+*.gpr

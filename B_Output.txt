@@ -1,0 +1,138 @@
+
+----------------------------------------------------
+------------- B option data and output--------------
+----------------------------------------------------
+
+How many nodes?
+7
+Enter name for node 1
+a  
+Enter name for node 2
+b  
+Enter name for node 3
+c  
+Enter name for node 4
+d  
+Enter name for node 5
+j  
+Enter name for node 6
+k  
+Enter name for node 7
+l  
+Can a talk to a?
+0
+Can a talk to b?
+1
+Can a talk to c?
+0
+Can a talk to d?
+0
+Can a talk to j?
+0
+Can a talk to k?
+0
+Can a talk to l?
+0
+Can b talk to a?
+0
+Can b talk to b?
+0
+Can b talk to c?
+1
+Can b talk to d?
+1
+Can b talk to j?
+0
+Can b talk to k?
+0
+Can b talk to l?
+0
+Can c talk to a?
+0
+Can c talk to b?
+1
+Can c talk to c?
+0
+Can c talk to d?
+0
+Can c talk to j?
+0
+Can c talk to k?
+0
+Can c talk to l?
+0
+Can d talk to a?
+0
+Can d talk to b?
+0
+Can d talk to c?
+0
+Can d talk to d?
+0
+Can d talk to j?
+1
+Can d talk to k?
+0
+Can d talk to l?
+0
+Can j talk to a?
+0
+Can j talk to b?
+0
+Can j talk to c?
+0
+Can j talk to d?
+1
+Can j talk to j?
+0
+Can j talk to k?
+1
+Can j talk to l?
+1
+Can k talk to a?
+0
+Can k talk to b?
+0
+Can k talk to c?
+0
+Can k talk to d?
+0
+Can k talk to j?
+1
+Can k talk to k?
+0
+Can k talk to l?
+0
+Can l talk to a?
+0
+Can l talk to b?
+0
+Can l talk to c?
+1
+Can l talk to d?
+0
+Can l talk to j?
+0
+Can l talk to k?
+0
+Can l talk to l?
+0
+Matrix before Warshaw's Algorithm is:
+     a    b    c    d    j    k    l    
+a    0    1    0    0    0    0    0   
+b    0    0    1    1    0    0    0   
+c    0    1    0    0    0    0    0   
+d    0    0    0    0    1    0    0   
+j    0    0    0    1    0    1    1   
+k    0    0    0    0    1    0    0   
+l    0    0    1    0    0    0    0   
+
+Matrix after Warshaw's Algorithm is:
+     a    b    c    d    j    k    l    
+a    0    1    1    1    1    1    1   
+b    0    1    1    1    1    1    1   
+c    0    1    1    1    1    1    1   
+d    0    1    1    1    1    1    1   
+j    0    1    1    1    1    1    1   
+k    0    1    1    1    1    1    1   
+l    0    1    1    1    1    1    1   
